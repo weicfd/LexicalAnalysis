@@ -1,0 +1,637 @@
+File: test1.txt: 
+
+Line: 1
+thread
+Thread1
+Line: 2
+features
+Line: 3
+AP_Position_Input
+:
+in
+event
+data
+port
+Nav_Types
+::
+Position_GPS
+;
+Line: 4
+flows
+Line: 5
+flow1
+:
+flow
+path
+signal
+->
+result1
+;
+Line: 6
+properties
+Line: 7
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 8
+end
+Thread1
+;
+Line: 9
+Line: 10
+thread
+Thread_2
+Line: 11
+features
+Line: 12
+AP_Position_Input
+:
+in
+data
+port
+Nav_Types1
+::
+Nav_Types2
+::
+Position_GPS
+;
+Line: 13
+flows
+Line: 14
+flow1
+:
+flow
+source
+signal
+{
+result1
+::
+result2
++=>
+constant
+access
+50.0
+}
+;
+Line: 15
+properties
+Line: 16
+none
+;
+Line: 17
+end
+Thread_2
+;
+Line: 18
+Line: 19
+thread
+Thread3d
+Line: 20
+features
+Line: 21
+AP_Position_Input
+:
+out
+data
+port
+Nav_Types1
+::
+Nav_Types2
+::
+Position_GPS
+{
+result1
+::
+result2
++=>
+constant
+access
+50.0
+}
+;
+Line: 22
+flows
+Line: 23
+flow1
+:
+flow
+sink
+signal
+{
+result1
+::
+result2
++=>
+constant
+access
+50.0
+}
+;
+Line: 24
+properties
+Line: 25
+size
+=>
+constant
+access
++50.0
+;
+Line: 26
+end
+Thread3d
+;
+Line: 27
+Line: 28
+thread
+Thread4
+Line: 29
+features
+Line: 30
+AP_Position_Input
+:
+in
+out
+parameter
+Nav_Types1
+::
+Nav_Types2
+::
+Position_GPS
+{
+result1
+::
+result2
+=>
+constant
+access
+50.0
+}
+;
+Line: 31
+flows
+Line: 32
+flow1
+:
+flow
+sink
+signal
+{
+result1
+::
+result2
++=>
+constant
+access
+50.0
+}
+;
+Line: 33
+properties
+Line: 34
+size
+=>
+constant
+access
+-50.0
+;
+Line: 35
+end
+Thread4
+;
+Line: 36
+Line: 37
+thread
+Thread5
+Line: 38
+features
+Line: 39
+AP_Position_Input
+:
+in
+out
+event
+port
+;
+Line: 40
+flows
+Line: 41
+flow1
+:
+flow
+sink
+signal
+{
+result1
+::
+result2
++=>
+constant
+access
+50.0
+}
+;
+Line: 42
+properties
+Line: 43
+size
+=>
+constant
+access
+50.0
+;
+Line: 44
+end
+Thread5
+;
+Line: 45
+Line: 46
+thread
+Thread6
+Line: 47
+features
+Line: 48
+none
+;
+Line: 49
+flows
+Line: 50
+none
+;
+Line: 51
+properties
+Line: 52
+none
+;
+Line: 53
+end
+Thread6
+Line: 54 EOF
+
+File: test2.txt: 
+
+Line: 1
+thread
+Thread1
+Line 1 Error:
+Ungood Symbol when parsing { # }
+Line: 2
+features
+Line: 3
+Line 3 Error:
+Ungood Symbol when parsing { _ }
+Line: 4
+flows
+Line: 5
+Line 5 Error:
+Decimal parse error when parsing { f }
+Line: 6
+properties
+Line: 7
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 8
+end
+Thread1
+;
+Line: 9
+Line: 10
+thread
+Thread2
+Line: 11
+features
+Line: 12
+Line 12 Error:
+Ungood Symbol when parsing { _ }
+Line: 13
+flows
+Line: 14
+flow1
+:
+flow
+path
+signal
+->
+result1
+;
+Line: 15
+properties
+Line: 16
+dispatch_protocol
+=>
+access
+Line 16 Error:
+Ungood Symbol when parsing { . }
+Line: 17
+end
+Thread2
+;
+Line: 18 EOF
+
+File: test3.txt: 
+
+Line: 1
+thread
+Thread1
+Line 1 Error:
+Ungood Symbol when parsing { # }
+Line: 2
+features
+Line: 3
+Line 3 Error:
+Ungood Symbol when parsing { _ }
+Line: 4
+flows
+Line: 5
+Line 5 Error:
+Decimal parse error when parsing { f }
+Line: 6
+properties
+Line: 7
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 8
+end
+Thread1
+;
+Line: 9
+Line: 10
+thread
+Thread2
+Line: 11
+features
+Line: 12
+AP_Position_Input
+:
+in
+event
+data
+port
+Nav_Types
+::
+Position_GPS
+;
+Line: 13
+flows
+Line: 14
+flow1
+:
+flow
+path
+signal
+->
+result1
+;
+Line: 15
+properties
+Line: 16
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 17
+Thread2
+;
+Line: 18
+Line: 19
+thread
+Thread3
+Line: 20
+features
+Line: 21
+AP_Position_Input
+:
+in
+event
+data
+port
+Nav_Types
+:
+Position_GPS
+;
+Line: 22
+flows
+Line: 23
+flow1
+:
+flow
+path
+signal
+Line 23 Error:
+Symbol spell error when parsing { > }
+Line: 24
+properties
+Line: 25
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 26
+end
+Thread3
+;
+Line: 27
+Line: 28
+thread
+Thread4
+Line: 29
+features
+Line: 30
+in
+event
+data
+port
+Nav_Types
+::
+Position_GPS
+;
+Line: 31
+flows
+Line: 32
+flow1
+:
+flow
+path
+signal
+->
+result1
+;
+Line: 33
+properties
+Line: 34
+dispatch_protocol
+=>
+access
+Line 34 Error:
+Ungood Symbol when parsing { . }
+Line: 35
+end
+Thread4
+;
+Line: 36
+Line: 37
+thread
+Thread5
+Line: 38
+features
+Line: 39
+AP_Position_Input
+:
+in
+event
+data
+port
+Nav_Types
+::
+Position_GPS
+;
+Line: 40
+flows
+Line: 41
+flow1
+:
+flow
+path
+signal
+->
+result1
+Line: 42
+properties
+Line: 43
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 44
+end
+Thread5
+;
+Line: 45
+Line: 46
+thread
+Thread6
+Line: 47
+features
+Line: 48
+AP_Position_Input
+:
+in
+event
+data
+port
+Nav_Types
+::
+Position_GPS
+;
+Line: 49
+flow1
+:
+flow
+path
+signal
+->
+result1
+;
+Line: 50
+properties11
+Line: 51
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 52
+end
+Thread6
+;
+Line: 53
+Line: 54
+thread
+Thread7
+Line: 55
+features
+Line: 56
+event
+:
+in
+event
+data
+port
+Nav_Types
+::
+Position_GPS
+;
+Line: 57
+flows
+Line: 58
+flow1
+:
+flow
+path
+signal
+->
+result1
+;
+Line: 59
+properties
+Line: 60
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 61
+end
+Thread7
+;
+Line: 62
+Line: 63
+thread
+thread
+Line: 64
+features
+Line: 65
+AP_Position_Input
+:
+in
+event
+data
+port
+Nav_Types
+::
+Position_GPS
+;
+Line: 66
+flows
+Line: 67
+flow1
+:
+flow
+path
+signal
+->
+result1
+;
+Line: 68
+properties
+Line: 69
+dispatch_protocol
+=>
+access
+50.0
+;
+Line: 70
+end
+thread
+Line: 71 EOF
+
