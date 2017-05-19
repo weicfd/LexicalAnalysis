@@ -39,6 +39,8 @@ int main(int argc, const char * argv[]) {
         cout << "File: " << testFile[i] << ": " << endl << endl;
         int lineNo = 0; // 行号
         
+        string keyword[] = {"thread", "features", "flows", "properties", "end", "none", "in", "out", "data", "port", "event", "parameter", "flow" , "source", "sink" , "path", "constant" , "access"};
+        
         // 读入行
         string line;
         while (getline(buffer,line)) {
@@ -47,7 +49,7 @@ int main(int argc, const char * argv[]) {
             
             int pos = 0;
             int state = START;
-            char next;
+            char next = ' ';
             bool rollback = false;
             while (pos < line.length()) {
                 string token = "";
@@ -97,6 +99,7 @@ int main(int argc, const char * argv[]) {
                                 case '}':
                                     state = DONE;
                                     token += next;
+                                    info = "symbol";
                                     break;
                                 case ' ':
                                 case '\t':
@@ -145,6 +148,7 @@ int main(int argc, const char * argv[]) {
                             }else{
                                 state = DONE;
                                 rollback = true;
+                                info = "decimal";
                             }
                             break;
                             
@@ -158,6 +162,10 @@ int main(int argc, const char * argv[]) {
                             }else{
                                 state = DONE;
                                 rollback = true;
+                                if (find(begin(keyword), end(keyword), token)!= std::end(keyword)) {
+                                    info = "keyword";
+                                }else
+                                    info = "identifier";
                             }
                             break;
                             
@@ -181,6 +189,11 @@ int main(int argc, const char * argv[]) {
                             }else {
                                 state = DONE;
                                 rollback = true;
+                                if (find(begin(keyword), end(keyword), token)!= std::end(keyword)) {
+                                    info = "keyword";
+                                }else
+                                    info = "identifier";
+
                             }
                             break;
                             
@@ -191,12 +204,14 @@ int main(int argc, const char * argv[]) {
                             }else{
                                 state = DONE;
                                 rollback = true;
+                                info = "symbol";
                             }
                             break;
                             
                         case 10:
                             state = DONE;
                             rollback = true;
+                            info = "symbol";
                             break;
                             
                         case 11:
@@ -211,6 +226,7 @@ int main(int argc, const char * argv[]) {
                         case 12:
                             state = DONE;
                             rollback = true;
+                            info = "symbol";
                             break;
                             
                         case 13:
@@ -244,7 +260,7 @@ int main(int argc, const char * argv[]) {
                     }
                 }
                 if (state == DONE) {
-                    cout << token << endl;
+                    cout << token << "  " << info <<endl;
                     token = "";
                     state = START;
                 }else if(state == ERROR) {

@@ -1,637 +1,637 @@
 File: test1.txt: 
 
 Line: 1
-thread
-Thread1
+thread  keyword
+Thread1  identifier
 Line: 2
-features
+features  keyword
 Line: 3
-AP_Position_Input
-:
-in
-event
-data
-port
-Nav_Types
-::
-Position_GPS
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+event  keyword
+data  keyword
+port  keyword
+Nav_Types  identifier
+::  symbol
+Position_GPS  identifier
+;  symbol
 Line: 4
-flows
+flows  keyword
 Line: 5
-flow1
-:
-flow
-path
-signal
-->
-result1
-;
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
+->  symbol
+result1  identifier
+;  symbol
 Line: 6
-properties
+properties  keyword
 Line: 7
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 8
-end
-Thread1
-;
+end  keyword
+Thread1  identifier
+;  symbol
 Line: 9
 Line: 10
-thread
-Thread_2
+thread  keyword
+Thread_2  identifier
 Line: 11
-features
+features  keyword
 Line: 12
-AP_Position_Input
-:
-in
-data
-port
-Nav_Types1
-::
-Nav_Types2
-::
-Position_GPS
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+data  keyword
+port  keyword
+Nav_Types1  identifier
+::  symbol
+Nav_Types2  identifier
+::  symbol
+Position_GPS  identifier
+;  symbol
 Line: 13
-flows
+flows  keyword
 Line: 14
-flow1
-:
-flow
-source
-signal
-{
-result1
-::
-result2
-+=>
-constant
-access
-50.0
-}
-;
+flow1  identifier
+:  symbol
+flow  keyword
+source  keyword
+signal  identifier
+{  symbol
+result1  identifier
+::  symbol
+result2  identifier
++=>  symbol
+constant  keyword
+access  keyword
+50.0  decimal
+}  symbol
+;  symbol
 Line: 15
-properties
+properties  keyword
 Line: 16
-none
-;
+none  keyword
+;  symbol
 Line: 17
-end
-Thread_2
-;
+end  keyword
+Thread_2  identifier
+;  symbol
 Line: 18
 Line: 19
-thread
-Thread3d
+thread  keyword
+Thread3d  identifier
 Line: 20
-features
+features  keyword
 Line: 21
-AP_Position_Input
-:
-out
-data
-port
-Nav_Types1
-::
-Nav_Types2
-::
-Position_GPS
-{
-result1
-::
-result2
-+=>
-constant
-access
-50.0
-}
-;
+AP_Position_Input  identifier
+:  symbol
+out  keyword
+data  keyword
+port  keyword
+Nav_Types1  identifier
+::  symbol
+Nav_Types2  identifier
+::  symbol
+Position_GPS  identifier
+{  symbol
+result1  identifier
+::  symbol
+result2  identifier
++=>  symbol
+constant  keyword
+access  keyword
+50.0  decimal
+}  symbol
+;  symbol
 Line: 22
-flows
+flows  keyword
 Line: 23
-flow1
-:
-flow
-sink
-signal
-{
-result1
-::
-result2
-+=>
-constant
-access
-50.0
-}
-;
+flow1  identifier
+:  symbol
+flow  keyword
+sink  keyword
+signal  identifier
+{  symbol
+result1  identifier
+::  symbol
+result2  identifier
++=>  symbol
+constant  keyword
+access  keyword
+50.0  decimal
+}  symbol
+;  symbol
 Line: 24
-properties
+properties  keyword
 Line: 25
-size
-=>
-constant
-access
-+50.0
-;
+size  identifier
+=>  symbol
+constant  keyword
+access  keyword
++50.0  decimal
+;  symbol
 Line: 26
-end
-Thread3d
-;
+end  keyword
+Thread3d  identifier
+;  symbol
 Line: 27
 Line: 28
-thread
-Thread4
+thread  keyword
+Thread4  identifier
 Line: 29
-features
+features  keyword
 Line: 30
-AP_Position_Input
-:
-in
-out
-parameter
-Nav_Types1
-::
-Nav_Types2
-::
-Position_GPS
-{
-result1
-::
-result2
-=>
-constant
-access
-50.0
-}
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+out  keyword
+parameter  keyword
+Nav_Types1  identifier
+::  symbol
+Nav_Types2  identifier
+::  symbol
+Position_GPS  identifier
+{  symbol
+result1  identifier
+::  symbol
+result2  identifier
+=>  symbol
+constant  keyword
+access  keyword
+50.0  decimal
+}  symbol
+;  symbol
 Line: 31
-flows
+flows  keyword
 Line: 32
-flow1
-:
-flow
-sink
-signal
-{
-result1
-::
-result2
-+=>
-constant
-access
-50.0
-}
-;
+flow1  identifier
+:  symbol
+flow  keyword
+sink  keyword
+signal  identifier
+{  symbol
+result1  identifier
+::  symbol
+result2  identifier
++=>  symbol
+constant  keyword
+access  keyword
+50.0  decimal
+}  symbol
+;  symbol
 Line: 33
-properties
+properties  keyword
 Line: 34
-size
-=>
-constant
-access
--50.0
-;
+size  identifier
+=>  symbol
+constant  keyword
+access  keyword
+-50.0  decimal
+;  symbol
 Line: 35
-end
-Thread4
-;
+end  keyword
+Thread4  identifier
+;  symbol
 Line: 36
 Line: 37
-thread
-Thread5
+thread  keyword
+Thread5  identifier
 Line: 38
-features
+features  keyword
 Line: 39
-AP_Position_Input
-:
-in
-out
-event
-port
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+out  keyword
+event  keyword
+port  keyword
+;  symbol
 Line: 40
-flows
+flows  keyword
 Line: 41
-flow1
-:
-flow
-sink
-signal
-{
-result1
-::
-result2
-+=>
-constant
-access
-50.0
-}
-;
+flow1  identifier
+:  symbol
+flow  keyword
+sink  keyword
+signal  identifier
+{  symbol
+result1  identifier
+::  symbol
+result2  identifier
++=>  symbol
+constant  keyword
+access  keyword
+50.0  decimal
+}  symbol
+;  symbol
 Line: 42
-properties
+properties  keyword
 Line: 43
-size
-=>
-constant
-access
-50.0
-;
+size  identifier
+=>  symbol
+constant  keyword
+access  keyword
+50.0  decimal
+;  symbol
 Line: 44
-end
-Thread5
-;
+end  keyword
+Thread5  identifier
+;  symbol
 Line: 45
 Line: 46
-thread
-Thread6
+thread  keyword
+Thread6  identifier
 Line: 47
-features
+features  keyword
 Line: 48
-none
-;
+none  keyword
+;  symbol
 Line: 49
-flows
+flows  keyword
 Line: 50
-none
-;
+none  keyword
+;  symbol
 Line: 51
-properties
+properties  keyword
 Line: 52
-none
-;
+none  keyword
+;  symbol
 Line: 53
-end
-Thread6
+end  keyword
+Thread6  identifier
 Line: 54 EOF
 
 File: test2.txt: 
 
 Line: 1
-thread
-Thread1
+thread  keyword
+Thread1  identifier
 Line 1 Error:
 Ungood Symbol when parsing { # }
 Line: 2
-features
+features  keyword
 Line: 3
 Line 3 Error:
 Ungood Symbol when parsing { _ }
 Line: 4
-flows
+flows  keyword
 Line: 5
 Line 5 Error:
 Decimal parse error when parsing { f }
 Line: 6
-properties
+properties  keyword
 Line: 7
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 8
-end
-Thread1
-;
+end  keyword
+Thread1  identifier
+;  symbol
 Line: 9
 Line: 10
-thread
-Thread2
+thread  keyword
+Thread2  identifier
 Line: 11
-features
+features  keyword
 Line: 12
 Line 12 Error:
 Ungood Symbol when parsing { _ }
 Line: 13
-flows
+flows  keyword
 Line: 14
-flow1
-:
-flow
-path
-signal
-->
-result1
-;
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
+->  symbol
+result1  identifier
+;  symbol
 Line: 15
-properties
+properties  keyword
 Line: 16
-dispatch_protocol
-=>
-access
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
 Line 16 Error:
 Ungood Symbol when parsing { . }
 Line: 17
-end
-Thread2
-;
+end  keyword
+Thread2  identifier
+;  symbol
 Line: 18 EOF
 
 File: test3.txt: 
 
 Line: 1
-thread
-Thread1
+thread  keyword
+Thread1  identifier
 Line 1 Error:
 Ungood Symbol when parsing { # }
 Line: 2
-features
+features  keyword
 Line: 3
 Line 3 Error:
 Ungood Symbol when parsing { _ }
 Line: 4
-flows
+flows  keyword
 Line: 5
 Line 5 Error:
 Decimal parse error when parsing { f }
 Line: 6
-properties
+properties  keyword
 Line: 7
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 8
-end
-Thread1
-;
+end  keyword
+Thread1  identifier
+;  symbol
 Line: 9
 Line: 10
-thread
-Thread2
+thread  keyword
+Thread2  identifier
 Line: 11
-features
+features  keyword
 Line: 12
-AP_Position_Input
-:
-in
-event
-data
-port
-Nav_Types
-::
-Position_GPS
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+event  keyword
+data  keyword
+port  keyword
+Nav_Types  identifier
+::  symbol
+Position_GPS  identifier
+;  symbol
 Line: 13
-flows
+flows  keyword
 Line: 14
-flow1
-:
-flow
-path
-signal
-->
-result1
-;
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
+->  symbol
+result1  identifier
+;  symbol
 Line: 15
-properties
+properties  keyword
 Line: 16
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 17
-Thread2
-;
+Thread2  identifier
+;  symbol
 Line: 18
 Line: 19
-thread
-Thread3
+thread  keyword
+Thread3  identifier
 Line: 20
-features
+features  keyword
 Line: 21
-AP_Position_Input
-:
-in
-event
-data
-port
-Nav_Types
-:
-Position_GPS
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+event  keyword
+data  keyword
+port  keyword
+Nav_Types  identifier
+:  symbol
+Position_GPS  identifier
+;  symbol
 Line: 22
-flows
+flows  keyword
 Line: 23
-flow1
-:
-flow
-path
-signal
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
 Line 23 Error:
 Symbol spell error when parsing { > }
 Line: 24
-properties
+properties  keyword
 Line: 25
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 26
-end
-Thread3
-;
+end  keyword
+Thread3  identifier
+;  symbol
 Line: 27
 Line: 28
-thread
-Thread4
+thread  keyword
+Thread4  identifier
 Line: 29
-features
+features  keyword
 Line: 30
-in
-event
-data
-port
-Nav_Types
-::
-Position_GPS
-;
+in  keyword
+event  keyword
+data  keyword
+port  keyword
+Nav_Types  identifier
+::  symbol
+Position_GPS  identifier
+;  symbol
 Line: 31
-flows
+flows  keyword
 Line: 32
-flow1
-:
-flow
-path
-signal
-->
-result1
-;
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
+->  symbol
+result1  identifier
+;  symbol
 Line: 33
-properties
+properties  keyword
 Line: 34
-dispatch_protocol
-=>
-access
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
 Line 34 Error:
 Ungood Symbol when parsing { . }
 Line: 35
-end
-Thread4
-;
+end  keyword
+Thread4  identifier
+;  symbol
 Line: 36
 Line: 37
-thread
-Thread5
+thread  keyword
+Thread5  identifier
 Line: 38
-features
+features  keyword
 Line: 39
-AP_Position_Input
-:
-in
-event
-data
-port
-Nav_Types
-::
-Position_GPS
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+event  keyword
+data  keyword
+port  keyword
+Nav_Types  identifier
+::  symbol
+Position_GPS  identifier
+;  symbol
 Line: 40
-flows
+flows  keyword
 Line: 41
-flow1
-:
-flow
-path
-signal
-->
-result1
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
+->  symbol
+result1  identifier
 Line: 42
-properties
+properties  keyword
 Line: 43
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 44
-end
-Thread5
-;
+end  keyword
+Thread5  identifier
+;  symbol
 Line: 45
 Line: 46
-thread
-Thread6
+thread  keyword
+Thread6  identifier
 Line: 47
-features
+features  keyword
 Line: 48
-AP_Position_Input
-:
-in
-event
-data
-port
-Nav_Types
-::
-Position_GPS
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+event  keyword
+data  keyword
+port  keyword
+Nav_Types  identifier
+::  symbol
+Position_GPS  identifier
+;  symbol
 Line: 49
-flow1
-:
-flow
-path
-signal
-->
-result1
-;
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
+->  symbol
+result1  identifier
+;  symbol
 Line: 50
-properties11
+properties11  identifier
 Line: 51
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 52
-end
-Thread6
-;
+end  keyword
+Thread6  identifier
+;  symbol
 Line: 53
 Line: 54
-thread
-Thread7
+thread  keyword
+Thread7  identifier
 Line: 55
-features
+features  keyword
 Line: 56
-event
-:
-in
-event
-data
-port
-Nav_Types
-::
-Position_GPS
-;
+event  keyword
+:  symbol
+in  keyword
+event  keyword
+data  keyword
+port  keyword
+Nav_Types  identifier
+::  symbol
+Position_GPS  identifier
+;  symbol
 Line: 57
-flows
+flows  keyword
 Line: 58
-flow1
-:
-flow
-path
-signal
-->
-result1
-;
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
+->  symbol
+result1  identifier
+;  symbol
 Line: 59
-properties
+properties  keyword
 Line: 60
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 61
-end
-Thread7
-;
+end  keyword
+Thread7  identifier
+;  symbol
 Line: 62
 Line: 63
-thread
-thread
+thread  keyword
+thread  keyword
 Line: 64
-features
+features  keyword
 Line: 65
-AP_Position_Input
-:
-in
-event
-data
-port
-Nav_Types
-::
-Position_GPS
-;
+AP_Position_Input  identifier
+:  symbol
+in  keyword
+event  keyword
+data  keyword
+port  keyword
+Nav_Types  identifier
+::  symbol
+Position_GPS  identifier
+;  symbol
 Line: 66
-flows
+flows  keyword
 Line: 67
-flow1
-:
-flow
-path
-signal
-->
-result1
-;
+flow1  identifier
+:  symbol
+flow  keyword
+path  keyword
+signal  identifier
+->  symbol
+result1  identifier
+;  symbol
 Line: 68
-properties
+properties  keyword
 Line: 69
-dispatch_protocol
-=>
-access
-50.0
-;
+dispatch_protocol  identifier
+=>  symbol
+access  keyword
+50.0  decimal
+;  symbol
 Line: 70
-end
-thread
+end  keyword
+thread  keyword
 Line: 71 EOF
 
